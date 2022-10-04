@@ -1,0 +1,11 @@
+Jeremiah Pino (jpino01)
+1a.) char *cp;
+1b.) char *ap[];
+1c.) int **pp;
+2.) Yes a pointer can point to itself. Like any other variable in memory a pointer has a memory address. Here is how to declare and initialize a pointer to point to itself: int *p = p. In this code a pointer p is created and then we assign pointer p with its own memory address.
+3.) In this code fragment when this is executed the program will crash because at p != '\0' because p is not dereferenced so it is comparing the memory address to '\0'. To fix this dereference p by doing *p != '\0' so that it compares the character values p is pointing to.
+4a.) Arrays and pointers are the same in the sense in how they access memory. Where A is an array both the statement A[i] and *(A+i) are the same. Also the statement &A[i] and (A+i) are the same. Arrays and pointers access memory in similar ways. 
+4b.) This saying is in error because arrays are used to store elements of the same type while pointers are used to stored the address of a variable. 
+5.) Perror is defined with the ISO C attribute const because the argument void perror(const char *s); ensures that the contents of the the string that s points to is not modified. Strerror does not have the constant keyword in its argument char *strerror(int errnum); because even if the function modifies the integer passed it would not modify the integer outside the function because the integer is passed by value.
+6.) It will overflow during the year 2038. We can extend the overflow point by making the time_t data type a 64-bit integer. If it is currently a 32-bit integer, applications will have to be recompiled to work properly. Some file systems and backup media store times in 32-bit integers; these would need to be updated. Also we would still need to be able to read the old format.
+7.) The data type of a size_t is an unsigned int. It is defined under the <stdlib.h> header file.
